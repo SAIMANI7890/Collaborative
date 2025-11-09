@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collaborative Canvas — Multi-Room</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>🀦♡ Collaborative Canvas ᝰ🖌</h1>
+      <p class="subtitle">Sketch Together Instantly — Multi-Room Access</p>
+    </header>
+
+    <!-- ROOM SELECTOR -->
+    <div id="roomSelector" class="room-selector">
+      <h2>Join a Drawing Room</h2>
+      <select id="roomDropdown">
+        <option value="Room A">Room A</option>
+        <option value="Room B">Room B</option>
+        <option value="Room C">Room C</option>
+      </select>
+      <input type="text" id="customRoom" placeholder="Or create new room..." />
+      <button id="joinRoomBtn">Join Room</button>
+    </div>
+
+    <!-- APP CONTAINER -->
+    <div id="appContainer" class="hidden">
+      <!-- Floating elements -->
+      <div id="userBadge"></div>
+      <div id="roomInfo"></div>
+      <div id="userOverlay"></div>
+
+      <main>
+        <!-- Floating Toolbar -->
+        <div class="toolbar glass">
+          <label
+            >🎨 Color:
+            <input type="color" id="colorPicker" value="#000000" />
+          </label>
+          <label
+            >🖌️ Brush:
+            <input type="range" id="brushSize" min="1" max="30" value="5" />
+          </label>
+          <button id="eraserBtn">🩹 Eraser</button>
+          <button id="undoBtn">↩️ Undo</button>
+          <button id="redoBtn">↪️ Redo</button>
+          <button id="clearBtn">🧹 Clear</button>
+          <button id="leaveBtn" class="danger">🚪 Leave</button>
+        </div>
+
+        <!-- Fullscreen Canvas -->
+        <div class="canvas-frame">
+          <div class="canvas-wrap">
+            <canvas id="committedCanvas"></canvas>
+            <canvas id="liveCanvas"></canvas>
+            <canvas id="cursorCanvas"></canvas>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="websocket.js"></script>
+    <script src="canvas.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
