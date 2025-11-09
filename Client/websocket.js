@@ -1,4 +1,4 @@
-window.socket = io("http://localhost:3000");
+window.socket = io("https://collaborative-server-2.onrender.com");
 window.netState = { userId: null, color: null, username: null, roomId: null };
 window.onlineUsers = new Map();
 
