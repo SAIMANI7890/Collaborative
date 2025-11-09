@@ -17,29 +17,14 @@ A multi-user web drawing application that allows multiple users to draw simultan
 ---
 
 ## 🏗️ Tech Stack
-**Frontend**
+**Frontend**:
 HTML5 Canvas + Vanilla JavaScript 
-**Backend**
+**Backend**:
 Node.js + Socket.io
-**Protocol**
+**Protocol**:
 WebSocket (bidirectional event streaming) |
 
 ---
-
-## 📂 Project Structure
-
-collaborative-canvas/
-├── client/
-│ ├── index.html # Main UI
-│ ├── style.css # Canvas and toolbar styling
-│ ├── canvas.js # Canvas drawing logic
-│ ├── websocket.js # Handles WebSocket connection & events
-│ └── main.js # App initialization and user setup
-├── server/
-│ ├── server.js # Express + Socket.io backend
-├── package.json
-├── README.md
-└── ARCHITECTURE.md
 
 **Setup & Usage**
 
